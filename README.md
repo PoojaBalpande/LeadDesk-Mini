@@ -9,7 +9,7 @@
 The application follows a decoupled single-tenant architecture:
 
 - **Frontend (`/frontend`)**: Next.js 16 (App Router), TypeScript, TailwindCSS, hosted on Vercel.
-- **Backend (`/backend`)**: FastAPI (Python 3.12+), Uvicorn, Pydantic, hosted on Render.
+- **Backend (`/backend`)**: FastAPI (Python 3.12+), Uvicorn, Pydantic Settings, hosted on Render.
 - **Database (Phase 4+)**: Neon PostgreSQL, SQLAlchemy 2.0 ORM, Alembic migrations.
 - **System Design & Specs (`/docs`)**: Full architecture blueprints, database ERDs, API contracts, and roadmap documents.
 
@@ -30,16 +30,49 @@ LeadDesk-Mini/
 │   └── DEVELOPMENT_ROADMAP.md# 9-phase milestone implementation plan
 │
 ├── frontend/                 # Next.js 16 App Router Frontend
+│   ├── .env.example          # Frontend environment variables template
 │   ├── public/               # Static assets
 │   └── src/                  # Source code (app, components, hooks, lib, services, types)
 │
 ├── backend/                  # FastAPI Backend API Service
+│   ├── .env.example          # Backend environment variables template
 │   └── app/                  # Source code (api, core, db, middleware, models, schemas, services)
 │
-├── .github/                  # GitHub configuration
+├── .env.example              # Root environment template
+├── .github/                  # GitHub configuration & templates
 ├── .gitignore                # Global gitignore configuration
-└── README.md                 # Project introduction
+├── CONTRIBUTING.md           # Contribution guidelines & coding standards
+└── README.md                 # Project introduction & setup guide
 ```
+
+---
+
+## ⚙️ Environment Configuration
+
+Before running the application locally, copy the example environment files:
+
+### 1. Root Environment Template
+```bash
+cp .env.example .env
+```
+
+### 2. Frontend Environment Setup
+```bash
+cd frontend
+cp .env.example .env.local
+```
+- `NEXT_PUBLIC_APP_NAME`: Application brand name (Default: `"LeadDesk Mini"`)
+- `NEXT_PUBLIC_API_URL`: Backend API URL (Default: `"http://localhost:8000"`)
+
+### 3. Backend Environment Setup
+```bash
+cd backend
+cp .env.example .env
+```
+- `PROJECT_NAME`: FastAPI title (Default: `"LeadDesk Mini API"`)
+- `API_V1_STR`: API URL prefix (Default: `"/api/v1"`)
+- `ENVIRONMENT`: Runtime mode (`"development"`, `"staging"`, `"production"`)
+- `BACKEND_CORS_ORIGINS`: Allowed CORS origins JSON list (Default: `["http://localhost:3000","http://127.0.0.1:3000"]`)
 
 ---
 
@@ -83,7 +116,7 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
 # Start uvicorn server with hot reload
-uvicorn app.main:app --reload
+python -m uvicorn app.main:app --reload
 ```
 
 The API will be available at **`http://localhost:8000`**.
