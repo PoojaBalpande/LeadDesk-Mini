@@ -1,0 +1,24 @@
+# Build outputs & cache
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/dist/
+
+# Dependencies
+frontend/node_modules/
+backend/.venv/
+backend/venv/
+
+# Python cache & build
+backend/__pycache__/
+backend/*/__pycache__/
+backend/*.pyc
+
+# Logs & coverage
+*.log
+coverage/
+.coverage
+
+# Package locks & git
+package-lock.json
+.git/
