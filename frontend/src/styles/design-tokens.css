@@ -1,0 +1,159 @@
+/**
+ * LeadDesk Mini design tokens — single source of truth.
+ * Components must consume semantic utilities bridged from these variables.
+ * Never copy hex values into component files.
+ */
+
+:root {
+  /* Color — light */
+  --background: #fbefef;
+  --surface: #fff7f6;
+  --section: #ffe2e2;
+  --card: #fff7f6;
+  --accent: #f5cbcb;
+  --primary: #c5b3d3;
+  --heading: #2d2a32;
+  --body: #5e5a66;
+  --border: #ebd4d4;
+  --muted: #8a8494;
+  --ring: #c5b3d3;
+  --primary-foreground: #2d2a32;
+  --accent-foreground: #2d2a32;
+  --overlay: rgba(45, 42, 50, 0.4);
+
+  /* Status — light */
+  --success: #7d9b7a;
+  --success-foreground: #f5fbf4;
+  --warning: #c4a574;
+  --warning-foreground: #2d2a32;
+  --danger: #c48b8b;
+  --danger-foreground: #2d2a32;
+  --info: #c5b3d3;
+  --info-foreground: #2d2a32;
+  --qualified: #b7c4e0;
+  --qualified-foreground: #2d2a32;
+
+  /* Type scale — font families bound from next/font on <html> */
+  --text-display: clamp(2.5rem, 5vw, 3.75rem);
+  --text-h2: clamp(1.75rem, 3vw, 2.5rem);
+  --text-h3: 1.25rem;
+  --text-body: 1rem;
+  --text-body-lg: 1.125rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
+  --leading-display: 1.15;
+  --leading-h2: 1.2;
+  --leading-h3: 1.3;
+  --leading-body: 1.6;
+  --leading-sm: 1.5;
+  --leading-xs: 1.4;
+
+  /* Spacing */
+  --space-section-y: 5rem;
+  --space-section-x: 1.5rem;
+  --space-stack-sm: 1.5rem;
+  --space-stack-md: 2rem;
+  --space-stack-lg: 3rem;
+  --space-page-gutter: 1rem;
+
+  /* Layout */
+  --layout-max-width: 80rem;
+  --layout-nav-height: 4rem;
+  --layout-nav-inset: 1rem;
+  --layout-hero-text: 45%;
+  --layout-hero-media: 55%;
+  --layout-section-gap: 2rem;
+
+  /* Opacity */
+  --opacity-subtle: 0.04;
+  --opacity-muted: 0.08;
+  --opacity-soft: 0.16;
+  --opacity-medium: 0.4;
+  --opacity-navbar: 0.72;
+  --opacity-navbar-scrolled: 0.88;
+  --opacity-blob: 0.35;
+  --opacity-disabled: 0.5;
+
+  /* Radius */
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(45, 42, 50, 0.06);
+  --shadow-md: 0 8px 24px rgba(45, 42, 50, 0.08);
+  --shadow-lg: 0 16px 40px rgba(45, 42, 50, 0.12);
+
+  /* Motion */
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-index */
+  --z-nav: 50;
+  --z-overlay: 100;
+  --z-toast: 200;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --space-section-y: 6rem;
+    --space-section-x: 2rem;
+    --space-page-gutter: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --space-section-x: 2.5rem;
+    --space-page-gutter: 2rem;
+  }
+}
+
+.dark {
+  --background: #221d2e;
+  --surface: #302740;
+  --section: #3b324d;
+  --card: #3b324d;
+  --accent: #f5cbcb;
+  --primary: #c5b3d3;
+  --heading: #f7f3fa;
+  --body: #d8cce6;
+  --border: #4a415c;
+  --muted: #a99bbb;
+  --ring: #c5b3d3;
+  --primary-foreground: #221d2e;
+  --accent-foreground: #221d2e;
+  --overlay: rgba(34, 29, 46, 0.6);
+
+  --success: #9bb896;
+  --success-foreground: #1a2419;
+  --warning: #d4b88a;
+  --warning-foreground: #221d2e;
+  --danger: #d4a0a0;
+  --danger-foreground: #221d2e;
+  --info: #c5b3d3;
+  --info-foreground: #221d2e;
+  --qualified: #c5d0ea;
+  --qualified-foreground: #221d2e;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* Theme color transitions only */
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html,
+body {
+  transition:
+    background-color var(--duration-base) var(--ease-standard),
+    color var(--duration-base) var(--ease-standard),
+    border-color var(--duration-base) var(--ease-standard);
+}
