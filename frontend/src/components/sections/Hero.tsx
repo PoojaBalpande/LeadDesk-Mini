@@ -43,13 +43,17 @@ export function Hero({
             </h1>
 
             <p className="mt-6 text-body-lg leading-[var(--leading-body)] text-body">
-              LeadDesk Mini gives scaling businesses a modern pipeline to capture
-              inquiries from high-converting landing pages and process them in
-              real-time.
+              LeadDesk Mini gives scaling businesses a modern pipeline to
+              capture inquiries from high-converting landing pages and process
+              them in real-time.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Button href={`#${SECTION_IDS.contact}`} variant="primary" size="lg">
+              <Button
+                href={`#${SECTION_IDS.contact}`}
+                variant="primary"
+                size="lg"
+              >
                 Start free inquiry
               </Button>
 
@@ -88,34 +92,52 @@ export function Hero({
                 {/* Column 1: New Leads */}
                 <div className="flex flex-col gap-2.5 rounded-2xl border border-border/60 bg-section/40 p-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold text-heading">New Leads</span>
+                    <span className="text-xs font-bold text-heading">
+                      New Leads
+                    </span>
                     <span className="rounded-full bg-info/20 px-2 py-0.5 text-[10px] font-bold text-info-foreground">
                       2
                     </span>
                   </div>
                   <div className="rounded-xl border border-border bg-card p-3 shadow-sm transition-transform hover:-translate-y-0.5">
-                    <div className="text-xs font-semibold text-heading">Acme Corp</div>
-                    <div className="mt-1 text-[11px] text-muted">$12,400 • Enterprise</div>
+                    <div className="text-xs font-semibold text-heading">
+                      Acme Corp
+                    </div>
+                    <div className="mt-1 text-[11px] text-muted">
+                      $12,400 • Enterprise
+                    </div>
                     <div className="mt-2 text-[10px] text-body">2 mins ago</div>
                   </div>
                   <div className="rounded-xl border border-border bg-card p-3 shadow-sm transition-transform hover:-translate-y-0.5">
-                    <div className="text-xs font-semibold text-heading">Nexus Design</div>
-                    <div className="mt-1 text-[11px] text-muted">$8,500 • Starter</div>
-                    <div className="mt-2 text-[10px] text-body">15 mins ago</div>
+                    <div className="text-xs font-semibold text-heading">
+                      Nexus Design
+                    </div>
+                    <div className="mt-1 text-[11px] text-muted">
+                      $8,500 • Starter
+                    </div>
+                    <div className="mt-2 text-[10px] text-body">
+                      15 mins ago
+                    </div>
                   </div>
                 </div>
 
                 {/* Column 2: Qualified */}
                 <div className="flex flex-col gap-2.5 rounded-2xl border border-border/60 bg-section/40 p-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold text-heading">Qualified</span>
+                    <span className="text-xs font-bold text-heading">
+                      Qualified
+                    </span>
                     <span className="rounded-full bg-qualified/20 px-2 py-0.5 text-[10px] font-bold text-qualified-foreground">
                       1
                     </span>
                   </div>
                   <div className="rounded-xl border border-border bg-card p-3 shadow-sm transition-transform hover:-translate-y-0.5">
-                    <div className="text-xs font-semibold text-heading">Vertex Systems</div>
-                    <div className="mt-1 text-[11px] text-muted">$45,000 • Growth</div>
+                    <div className="text-xs font-semibold text-heading">
+                      Vertex Systems
+                    </div>
+                    <div className="mt-1 text-[11px] text-muted">
+                      $45,000 • Growth
+                    </div>
                     <div className="mt-2 text-[10px] text-body">1 hour ago</div>
                   </div>
                 </div>
@@ -123,15 +145,23 @@ export function Hero({
                 {/* Column 3: Proposal Sent */}
                 <div className="flex flex-col gap-2.5 rounded-2xl border border-border/60 bg-section/40 p-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold text-heading">Proposal Sent</span>
+                    <span className="text-xs font-bold text-heading">
+                      Proposal Sent
+                    </span>
                     <span className="rounded-full bg-warning/20 px-2 py-0.5 text-[10px] font-bold text-warning-foreground">
                       1
                     </span>
                   </div>
                   <div className="rounded-xl border border-border bg-card p-3 shadow-sm transition-transform hover:-translate-y-0.5">
-                    <div className="text-xs font-semibold text-heading">Nebula AI</div>
-                    <div className="mt-1 text-[11px] text-muted">$88,000 • Custom</div>
-                    <div className="mt-2 text-[10px] text-body">3 hours ago</div>
+                    <div className="text-xs font-semibold text-heading">
+                      Nebula AI
+                    </div>
+                    <div className="mt-1 text-[11px] text-muted">
+                      $88,000 • Custom
+                    </div>
+                    <div className="mt-2 text-[10px] text-body">
+                      3 hours ago
+                    </div>
                   </div>
                 </div>
 
@@ -144,8 +174,12 @@ export function Hero({
                     </span>
                   </div>
                   <div className="rounded-xl border border-border bg-card p-3 shadow-sm transition-transform hover:-translate-y-0.5">
-                    <div className="text-xs font-semibold text-heading">Starlight Labs</div>
-                    <div className="mt-1 text-[11px] text-muted">$32,500 • Pro</div>
+                    <div className="text-xs font-semibold text-heading">
+                      Starlight Labs
+                    </div>
+                    <div className="mt-1 text-[11px] text-muted">
+                      $32,500 • Pro
+                    </div>
                     <div className="mt-2 text-[10px] text-body">Just now</div>
                   </div>
                 </div>

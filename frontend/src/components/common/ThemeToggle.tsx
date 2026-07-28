@@ -22,7 +22,11 @@ const emptySubscribe = () => () => {};
 
 export function ThemeToggle() {
   const { theme, setTheme, resolvedTheme } = useTheme();
-  const mounted = useSyncExternalStore(emptySubscribe, () => true, () => false);
+  const mounted = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  );
 
   const mode = (theme as ThemeMode | undefined) ?? "system";
   const Icon = mounted ? ICONS[mode] : Monitor;

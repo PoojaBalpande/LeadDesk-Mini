@@ -20,10 +20,8 @@ export function Button({
     "inline-flex items-center justify-center font-semibold rounded-full transition-all duration-[var(--duration-base)] ease-[var(--ease-standard)] focus-visible:outline-none disabled:pointer-events-none disabled:opacity-[var(--opacity-disabled)] active:scale-[0.98]";
 
   const variantStyles = {
-    primary:
-      "bg-primary text-primary-foreground shadow-sm hover:opacity-90",
-    secondary:
-      "bg-heading text-background shadow-sm hover:opacity-90",
+    primary: "bg-primary text-primary-foreground shadow-sm hover:opacity-90",
+    secondary: "bg-heading text-background shadow-sm hover:opacity-90",
     outline:
       "border border-border bg-surface text-heading shadow-sm hover:bg-accent",
   };
